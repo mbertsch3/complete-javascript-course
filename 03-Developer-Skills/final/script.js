@@ -159,3 +159,51 @@ const printForecast = function (arr) {
 printForecast(data1);
 */
 
+// const jonasArray = [
+//   'Jonas',
+//   'Schmedtmann',
+//   2037 - 1991,
+//   'teacher',
+//   ['Michael', 'Peter', 'Steven']
+// ];
+
+// const jonas = {
+//   firstName: 'Jonas',
+//   lastName: 'Schmedtmann',
+//   age: 2037 - 1991,
+//   job: 'teacher',
+//   friends: ['Michael', 'Peter', 'Steven']
+// };
+
+// console.log(jonasArray);
+// console.log(jonas);
+// console.log(jonasArray[1]);
+// console.log(jonas.firstName);
+// console.log(jonas['lastName']);
+// console.log(jonas.friends[2]);
+// console.log(jonas['friends'][2]);
+
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);  
+// console.log(jonas['last' + nameKey]);
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is call ${jonas.friends[0]}`);
+// // console.log(jonas.'last' + nameKey); doesn't work because to build the computed name, 
+// // must use backet notation instead of dot notation
+                                      
+// const interestedIn = prompt('What do you want to know about Jonas?  Choose between firstName, lastName, age, job, and friends');
+// console.log(jonas[interestedIn]);
+
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDriversLicense: true,
+  calcAge: function(birthYear) {
+    return 2022 - birthYear;
+  }
+};
+
+console.log(jonas.calcAge(1972));
+console.log(jonas['calcAge'](1972));
