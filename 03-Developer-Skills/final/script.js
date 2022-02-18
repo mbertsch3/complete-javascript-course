@@ -199,11 +199,17 @@ const jonas = {
   birthYear: 1991,
   job: 'teacher',
   friends: ['Michael', 'Peter', 'Steven'],
-  hasDriversLicense: true,
-  calcAge: function(birthYear) {
-    return 2022 - birthYear;
+  hasDriversLicense: false,
+
+  calcAge: function() {
+    this.age = 2022 - this.birthYear;
+    return this.age;
   }
 };
 
 console.log(jonas.calcAge(1972));
 console.log(jonas['calcAge'](1972));
+console.log(jonas.age);
+
+
+console.log(`Jonas is a ${jonas.age}-year old ${jonas.job}, and he ${jonas.hasDriversLicense ? 'does' : 'does not'} have his license.`);
